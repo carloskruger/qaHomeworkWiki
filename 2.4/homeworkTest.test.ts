@@ -6,7 +6,7 @@ import {
     WebDriver,
     WebElement,
     Key,
-} from "selenium-webdriver";
+} from np;
 
 const chromedriver = require("chromedriver");
 
@@ -35,6 +35,7 @@ describe("Employee Manager 1.2", () => {
         await driver.quit();
     });
     describe("handles unsaved, canceled, and saved changes correctly", () => {
+        // This is test 1
         test("An unsaved change doesn't persist", async () => {
         /*
         This test follows these steps:
@@ -68,7 +69,7 @@ describe("Employee Manager 1.2", () => {
             await (await driver.findElement(nameInput)).getAttribute("value")
         ).toBe("Bernice Ortiz");
         });
-
+        // This is test 2
         test("A canceled change doesn't persist", async () => {
             /*
             This test follows these steps:
@@ -88,7 +89,7 @@ describe("Employee Manager 1.2", () => {
                 await (await driver.findElement(nameInput)).getAttribute("value")
             ).toBe("Phillip Weaver");
         });
-
+        // This is test 3
         test("A saved change persists", async () => {
             /*
             This test follows these steps:
@@ -121,6 +122,7 @@ describe("Employee Manager 1.2", () => {
 });
 
     describe("handles error messages correctly", () => {
+         // This is test 4
         test("shows an error message for an empty name field", async () => {
             /*
             This test follows these steps:
@@ -141,6 +143,7 @@ describe("Employee Manager 1.2", () => {
                 "The name field must be between 1 and 30 characters long."
             );
         });
+         // This is test 5
         test("lets you cancel out of an error message", async () => {
             /*
             This test follows these steps:
