@@ -6,7 +6,7 @@ import {
     WebDriver,
     WebElement,
     Key,
-} from np;
+} from "selenium-webdriver";
 
 const chromedriver = require("chromedriver");
 
