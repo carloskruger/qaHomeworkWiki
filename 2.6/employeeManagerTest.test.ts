@@ -40,7 +40,7 @@ import {Builder,By, Capabilities, until, WebDriver, } from "selenium-webdriver";
       })
       test("adding an employee", async () => {
           await driver.wait(until.elementLocated(emPage.headerLogo))
-          await driver.findElement(emPage.addEmployee)
+          await driver.findElement(emPage.addEmployee).click()
           await driver.findElement(emPage.nameInput).click()
           await driver.findElement(emPage.nameInput).clear()
           await driver.findElement(emPage.nameInput).sendKeys("Carlos")
